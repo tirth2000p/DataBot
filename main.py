@@ -86,6 +86,9 @@ def chat_bot():
         conversation_state = {'learning_mode': True, 'previous_question': user_input}
         return jsonify({'response': "I don't know. Can you teach me?"})
 
+@app.route('/', methods=['GET'])
+def initial():
+    return jsonify({'Works': "out"})
 
 if __name__ == '__main__':
     app.run(debug=True)
